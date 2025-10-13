@@ -160,18 +160,31 @@
       font-size: 13px;
       letter-spacing: 0.06em;
     }
-    
-      .gallery {
+    /* 画像の位置 */
+     .gallery {
       display: grid;
       grid-template-columns: repeat(2, 1fr); /* 2列 */
       grid-template-rows: repeat(4, auto);   /* 4行 */
-      gap: 10px; /* 画像の間隔 */
-      width: 400px; /* 全体の幅（必要に応じて調整） */
+      gap: 15px;
+      width: 400px;
+      margin: auto;
     }
-    .gallery img {
+    /* 文字の場所 */
+    figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    figure img {
       width: 100%;
       height: auto;
-      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    figcaption {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #555;
     }
 
     /* 画面幅が900px以下の場合のレスポンシブ調整 */
@@ -260,17 +273,42 @@
       </tbody>
     </table>
   </div> -->
-
+  <!-- 空白 -->
+<div style="margin-top:20px;"></div>
   <!-- 買取商材をイメージさせるメインビジュアル -->
-   <div class="gallery">
-    <img src="image/Cu_image.png" alt="画像1">
-    <img src="image/airconditionar.png" alt="画像2">
-    <img src="image/battery.png" alt="画像3">
-    <img src="image/sen.png" alt="画像4">
-    <img src="image/sinntyu.png" alt="画像5">
-    <img src="image/sen_image.png" alt="画像6">
-    <img src="image7.jpg" alt="画像7">
-    <img src="image8.jpg" alt="画像8">
+    <div class="gallery">
+    <figure>
+      <img src="image/Cu_image.png" alt="画像1">
+      <figcaption>銅</figcaption>
+    </figure>
+    <figure>
+      <img src="image/airconditionar.png" alt="画像2">
+      <figcaption>エアコン</figcaption>
+    </figure>
+    <figure>
+      <img src="image/battery.png" alt="画像3">
+      <figcaption>バッテリー</figcaption>
+    </figure>
+    <figure>
+      <img src="image/sen.png" alt="画像4">
+      <figcaption>これなに？</figcaption>
+    </figure>
+    <figure>
+      <img src="image/sen_image.png" alt="画像5">
+      <figcaption>これもないに？</figcaption>
+    </figure>
+    <figure>
+      <img src="image/sinntyu.png" alt="画像6">
+      <figcaption>真鍮</figcaption>
+    </figure>
+    <figure>
+      <img src="image7.jpg" alt="画像7">
+      <figcaption>画像7の説明</figcaption>
+    </figure>
+    <figure>
+      <img src="image8.jpg" alt="画像8">
+      <figcaption>画像8の説明</figcaption>
+    </figure>
   </div>
   <!-- 著作権表示を含むフッター -->
   <footer>
