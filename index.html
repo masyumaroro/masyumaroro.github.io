@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>エスエイチ商会</title>
   <style>
+    /* 全要素と疑似要素のボックスサイズを統一してレイアウト崩れを防ぐ */
     *,
     *::before,
     *::after {
       box-sizing: border-box;
     }
 
+    /* ページ全体の基本となるタイポグラフィと背景色を定義 */
     body {
       margin: 0;
       font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
@@ -18,16 +20,19 @@
       background: #f3f6f9;
     }
 
+    /* リンクカラーと装飾の初期設定を解除してベースを整える */
     a {
       color: inherit;
       text-decoration: none;
     }
 
+    /* ヘッダーバーの背景と下線を設定し、全体の基調色を示す */
     header {
       background: #fff;
       border-bottom: 2px solid #0e7ca6;
     }
 
+    /* ヘッダー内のレイアウトと間隔を調整するトップバー */
     .top-bar {
       max-width: 1080px;
       margin: 0 auto;
@@ -40,6 +45,7 @@
       letter-spacing: 0.08em;
     }
 
+    /* ブランド名の強調スタイル */
     .brand {
       font-size: 28px;
       font-weight: 700;
@@ -47,6 +53,7 @@
       color: #0c3d66;
     }
 
+    /* ナビゲーションリンクの横並びレイアウト */
     nav ul {
       display: flex;
       list-style: none;
@@ -57,6 +64,7 @@
       font-weight: 500;
     }
 
+    /* 電話番号エリアの配置と色設定 */
     .phone {
       text-align: right;
       white-space: nowrap;
@@ -64,6 +72,7 @@
       color: #0c3d66;
     }
 
+    /* 電話番号ラベルのスタイル細部 */
     .phone span {
       display: block;
       font-size: 13px;
@@ -72,6 +81,7 @@
       margin-bottom: 2px;
     }
 
+    /* ヒーローセクション全体の背景と配置を設定 */
     .hero {
       position: relative;
       background: linear-gradient(135deg, #dff3ff 0%, #b8e8ff 100%);
@@ -79,6 +89,7 @@
       color: #0c3d66;
     }
 
+    /* ヒーロー内パネルのレイアウトと装飾 */
     .hero-content {
       max-width: 1080px;
       margin: 0 auto;
@@ -92,6 +103,7 @@
       min-height: 260px;
     }
 
+    /* 仮画像用プレースホルダーの表示スタイル */
     .hero-placeholder {
       position: absolute;
       inset: 0;
@@ -108,6 +120,7 @@
       pointer-events: none;
     }
 
+    /* キャッチコピー文字のサイズと位置 */
     .hero-copy {
       font-size: 36px;
       font-weight: 600;
@@ -117,6 +130,7 @@
       z-index: 1;
     }
 
+    /* ヒーロー右側のアイコン枠デザイン */
     .hero-icon {
       width: 140px;
       min-width: 140px;
@@ -130,11 +144,13 @@
       z-index: 1;
     }
 
+    /* アイコン内のSVGカラー指定 */
     .hero-icon svg {
       width: 64px;
       fill: #0e7ca6;
     }
 
+    /* 新着情報セクションの背景色と余白 */
     .news-section {
       background: #aee7f9;
       border-top: 6px solid #0e7ca6;
@@ -143,6 +159,7 @@
       padding: 12px 24px 16px;
     }
 
+    /* 新着情報見出しのスタイル */
     .news-section h2 {
       margin: 0;
       font-size: 28px;
@@ -151,6 +168,7 @@
       color: #0c3d66;
     }
 
+    /* 新着情報テーブル全体のラッパースタイル */
     .news-table-wrapper {
       background: #fff;
       max-width: 1080px;
@@ -161,12 +179,31 @@
       transform: translateY(-40px);
     }
 
+    /* 新着情報下に表示するキービジュアル画像の枠 */
+    .feature-image {
+      max-width: 1080px;
+      margin: -20px auto 80px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    /* 画像が枠内で自然に収まるよう調整 */
+    .feature-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    /* テーブルの基本レイアウト */
     table {
       width: 100%;
       border-collapse: collapse;
       font-size: 16px;
     }
 
+    /* テーブルセル共通の境界線と余白 */
     th,
     td {
       border: 1px solid #9cb9c5;
@@ -175,6 +212,7 @@
       background: #fff;
     }
 
+    /* 見出しセル用の背景と幅 */
     th {
       background: #f0fbff;
       font-weight: 600;
@@ -182,6 +220,7 @@
       width: 220px;
     }
 
+    /* フッター領域の配色と余白 */
     footer {
       background: #0c3d66;
       color: #fff;
@@ -191,38 +230,46 @@
       letter-spacing: 0.06em;
     }
 
+    /* 画面幅が900px以下の場合のレスポンシブ調整 */
     @media (max-width: 900px) {
+      /* トップバーの中央寄せと折返し対応 */
       .top-bar {
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
       }
 
+      /* スマホ時にブランド名を横幅いっぱいに表示 */
       .brand {
         flex-basis: 100%;
       }
 
+      /* ナビゲーションを折り返して中央揃え */
       nav ul {
         flex-wrap: wrap;
         justify-content: center;
         gap: 16px;
       }
 
+      /* 電話番号表示を中央寄せに変更 */
       .phone {
         flex-basis: 100%;
         text-align: center;
       }
 
+      /* ヒーロー内要素を縦並びに切り替え */
       .hero-content {
         flex-direction: column;
         text-align: center;
       }
 
+      /* アイコンを少し小さくしてバランス調整 */
       .hero-icon {
         width: 110px;
         min-width: 110px;
       }
 
+      /* 見出しセルの幅制限を解除 */
       th {
         width: auto;
       }
@@ -230,9 +277,12 @@
   </style>
 </head>
 <body>
+  <!-- 会社ロゴとナビゲーションを含むトップヘッダー -->
   <header>
     <div class="top-bar">
+      <!-- サイト名ロゴ -->
       <div class="brand">エスエイチ商会</div>
+      <!-- 主なページへのナビゲーションリンク -->
       <nav>
         <ul>
           <li><a href="#">出張買取</a></li>
@@ -241,6 +291,7 @@
           <li><a href="#">アクセス</a></li>
         </ul>
       </nav>
+      <!-- 問い合わせ電話番号の表示 -->
       <div class="phone">
         <span>電話番号</span>
         000-000-000
@@ -249,13 +300,16 @@
   </header>
 
 
+  <!-- 新着情報セクションの見出し部分 -->
   <section class="news-section">
     <h2>新着情報</h2>
   </section>
 
+  <!-- 新着情報をテーブル形式で表示する領域 -->
   <div class="news-table-wrapper">
     <table>
       <tbody>
+        <!-- 公開日と内容の1件目 -->
         <tr>
           <th scope="row">6月00日</th>
           <td>ホームページができました</td>
@@ -264,6 +318,12 @@
     </table>
   </div>
 
+  <!-- 買取商材をイメージさせるメインビジュアル -->
+  <figure class="feature-image">
+    <img src="" alt="銅線スクラップのイメージ写真" />
+  </figure>
+
+  <!-- 著作権表示を含むフッター -->
   <footer>
     © 2024 エスエイチ商会 All Rights Reserved.
   </footer>
