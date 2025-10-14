@@ -1,24 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
-    <title>サイトタイトル</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="キーワード">
-    <meta name="description" content="内容">
-    <meta name="author" content="社名など">
-    <!--sns-->
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="キーワード">
-    <meta property="og:title" content="タイトル">
-    <meta property="og:image" content="og_img絶対パス">
-    <meta property="og:url" content="サイトの絶対パス">
-    <!--front-->
-    <link href="../assets/css/common.css" rel="stylesheet">
-    <script src="../assets/js/jquery-3.3.1.min.js"></script>
-    <script src="../assets/js/common.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>アクセス | エスエイチ商会</title>
+    <style>
+      /* ページ全体のベースカラーとタイポグラフィを index.html と揃える */
+      body {
+        margin: 0;
+        font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+        color: #1f1f1f;
+        background: #f3f6f9;
+      }
+
+      /* コンテンツをカード風に中央配置 */
+      .wrapper {
+        min-height: 100vh;
+        padding: 48px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* 住所情報のボックスデザイン */
+      .address-card {
+        background: #fff;
+        padding: 32px 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        border-top: 6px solid #0e7ca6;
+        text-align: center;
+        letter-spacing: 0.08em;
+        line-height: 1.8;
+        max-width: 480px;
+        width: 100%;
+      }
+
+      /* 見出しの配色もトップページに合わせる */
+      .address-card h1 {
+        margin: 0 0 16px;
+        font-size: 24px;
+        color: #0c3d66;
+        font-weight: 600;
+      }
+
+      .address-card p {
+        margin: 0;
+        font-size: 18px;
+      }
+    </style>
   </head>
   <body>
-    サイトの本文
+    <main class="wrapper">
+      <section class="address-card">
+        <h1>アクセス</h1>
+        <p>571-0044</p>
+        <p>大阪府門真市松生町3-3</p>
+      </section>
+    </main>
   </body>
 </html>
