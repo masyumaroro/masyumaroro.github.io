@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>アクセス | エスエイチ商会</title>
-    <style>
-      /* ページ全体のベースカラーとタイポグラフィを index.html と揃える */
-      *,
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="エスエイチ商会,リサイクル, リサイクル業">
+  <meta name="keywords" content="リサイクル業">
+  <meta name="author" content="エスエイチ商会">
+  <title>エスエイチ商会</title>
+  <style>
+    /* 全要素と疑似要素のボックスサイズを統一してレイアウト崩れを防ぐ */
+    *,
     *::before,
     *::after {
       box-sizing: border-box;
@@ -187,7 +190,8 @@
       color: #555;
     }
 
-     @media (max-width: 900px) {
+    /* 画面幅が900px以下の場合のレスポンシブ調整 */
+    @media (max-width: 900px) {
       /* トップバーの中央寄せと折返し対応 */
       .top-bar {
         flex-wrap: wrap;
@@ -230,9 +234,12 @@
         width: auto;
       }
     }
-    </style>
-    <header>
-         <div class="top-bar">
+  </style>
+</head>
+<body>
+  <!-- 会社ロゴとナビゲーションを含むトップヘッダー -->
+  <header>
+    <div class="top-bar">
       <!-- サイト名ロゴ -->
       <div class="brand"><a href="index.html">エスエイチ商会</a></div>
       <!-- 主なページへのナビゲーションリンク -->
@@ -249,17 +256,58 @@
         <span>電話番号</span>
         090-2590-4985
       </div>
-    </header>
-  </head>
-  <body>
-    <section class="news-section">
-    <h2>アクセス</h2>
+    </div>
+  </header>
+
+
+  <!-- 新着情報セクションの見出し部分 -->
+  <section class="news-section">
+    <h2>買取項目</h2>
   </section>
-    <main class="wrapper">
-      <section class="address-card">
-        <p>571-0044</p>
-        <p>大阪府門真市松生町3-3</p>
-      </section>
-    </main>
-  </body>
+  <!-- 空白 -->
+<div style="margin-top:20px;"></div>
+  <!-- 買取商材をイメージさせるメインビジュアル -->
+    <div class="gallery">
+    <figure>
+      <img src="image/Cu_image.png" alt="画像1">
+      <figcaption>銅</figcaption>
+    </figure>
+    <figure>
+      <img src=""alt="画像2">
+      <figcaption>エアコン</figcaption>
+    </figure>
+    <figure>
+      <img src="image/battery.png" alt="画像3">
+      <figcaption>バッテリー</figcaption>
+    </figure>
+    <figure>
+      <img src="image/sen.png" alt="画像4">
+      <figcaption>クーラーパイプ</figcaption>
+    </figure>
+    <figure>
+      <img src="image/sen_image.png" alt="画像5">
+      <figcaption>雑線</figcaption>
+    </figure>
+    <figure>
+      <img src="image/sinntyu.png" alt="画像6">
+      <figcaption>真鍮</figcaption>
+    </figure>
+    <figure>
+      <img src="image7.jpg" alt="画像7">
+      <figcaption></figcaption>
+    </figure>
+    <figure>
+      <img src="image8.jpg" alt="画像8">
+      <figcaption></figcaption>
+    </figure>
+  </div>
+
+  <div>古物商 第62228R035744号</div>
+  <div> 金属屑 第5745号</div>
+  <div>産業廃棄収集運搬業 第244451号</div>
+  <!-- 著作権表示を含むフッター -->
+  <footer>
+    © 2025 エスエイチ商会
+  </footer>
+</body>
 </html>
