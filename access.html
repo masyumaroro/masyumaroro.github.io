@@ -4,282 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>アクセス | エスエイチ商会</title>
-    <style>
-      /* ページ全体のベースカラーとタイポグラフィを index.html と揃える */
-      *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    /* ページ全体の基本となるタイポグラフィと背景色を定義 */
-    body {
-      margin: 0;
-      font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
-      color: #1f1f1f;
-      background: #f3f6f9;
-    }
-
-    /* リンクカラーと装飾の初期設定を解除してベースを整える */
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* ヘッダーバーの背景と下線を設定し、全体の基調色を示す */
-    header {
-      background: #fff;
-      border-bottom: 2px solid #4ad251;
-    }
-
-    /* ヘッダー内のレイアウトと間隔を調整するトップバー */
-    .top-bar {
-      max-width: 1080px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 24px;
-      gap: 24px;
-      font-size: 15px;
-      letter-spacing: 0.08em;
-    }
-
-    /* ブランド名の強調スタイル */
-    .brand {
-      font-size: 28px;
-      font-weight: 700;
-      white-space: nowrap;
-      color: #0c3d66;
-    }
-
-    /* ナビゲーションリンクの横並びレイアウト */
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 28px;
-      margin: 0;
-      padding: 0;
-      white-space: nowrap;
-      font-weight: 500;
-    }
-
-    /* 電話番号エリアの配置と色設定 */
-    .phone {
-      text-align: right;
-      white-space: nowrap;
-      font-weight: 600;
-      color: #0c3d66;
-    }
-
-    /* 電話番号ラベルのスタイル細部 */
-    .phone span {
-      display: block;
-      font-size: 13px;
-      color: #000;
-      font-weight: 500;
-      margin-bottom: 2px;
-    }
-
-    /* 新着情報セクションの背景色と余白 */
-    .news-section {
-      background: #aee7f9;
-      border-top: 6px solid #0e7ca6;
-      border-bottom: 2px solid #0e7ca6;
-      text-align: center;
-      padding: 12px 24px 16px;
-    }
-
-    /* 新着情報見出しのスタイル */
-    .news-section h2 {
-      margin: 0;
-      font-size: 28px;
-      letter-spacing: 0.1em;
-      font-weight: 600;
-      color: #0c3d66;
-    }
-
-    /* 新着情報テーブル全体のラッパースタイル */
-    .news-table-wrapper {
-      background: #fff;
-      max-width: 1080px;
-      margin: 0 auto 80px;
-      padding: 24px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      border-radius: 6px;
-      transform: translateY(-40px);
-    }
-
-    /* 新着情報下に表示するキービジュアル画像の枠 */
-    .feature-image {
-      max-width: 1080px;
-      margin: -20px auto 80px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    }
-
-    /* 画像が枠内で自然に収まるよう調整 */
-    .feature-image img {
-      display: block;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    /* テーブルの基本レイアウト */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 16px;
-    }
-
-    /* テーブルセル共通の境界線と余白 */
-    th,
-    td {
-      border: 1px solid #9cb9c5;
-      padding: 16px 20px;
-      text-align: left;
-      background: #fff;
-    }
-
-    /* 見出しセル用の背景と幅 */
-    th {
-      background: #f0fbff;
-      font-weight: 600;
-      color: #0c3d66;
-      width: 220px;
-    }
-
-    /* フッター領域の配色と余白 */
-    footer {
-      background: #0c3d66;
-      color: #fff;
-      text-align: center;
-      padding: 24px 16px 32px;
-      font-size: 13px;
-      letter-spacing: 0.06em;
-    }
-    /* 画像の位置 */
-     .gallery {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 2列 */
-      grid-template-rows: repeat(4, auto);   /* 4行 */
-      gap: 15px;
-      width: 400px;
-      margin: auto;
-    }
-    /* 文字の場所 */
-    figure {
-      margin: 0;
-      text-align: center;
-    }
-
-    figure img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-
-    figcaption {
-      margin-top: 5px;
-      font-size: 14px;
-      color: #555;
-    }
-
-     @media (max-width: 900px) {
-      /* トップバーの中央寄せと折返し対応 */
-      .top-bar {
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-      }
-
-      /* スマホ時にブランド名を横幅いっぱいに表示 */
-      .brand {
-        flex-basis: 100%;
-      }
-
-      /* ナビゲーションを折り返して中央揃え */
-      nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 16px;
-      }
-
-      /* 電話番号表示を中央寄せに変更 */
-      .phone {
-        flex-basis: 100%;
-        text-align: center;
-      }
-
-      /* ヒーロー内要素を縦並びに切り替え */
-      .hero-content {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      /* アイコンを少し小さくしてバランス調整 */
-      .hero-icon {
-        width: 110px;
-        min-width: 110px;
-      }
-
-      /* 見出しセルの幅制限を解除 */
-      th {
-        width: auto;
-      }
-    }
-    </style>
-    <header>
-         <div class="top-bar">
-      <!-- サイト名ロゴ -->
-      <div class="brand"><a href="index.html">エスエイチ商会</a></div>
-      <!-- 主なページへのナビゲーションリンク -->
-      <nav>
-        <ul>
-          <li><a href="index.html">出張引き取り</a></li>
-          <li><a href="buy_item.html">回収項目</a></li>
-          <li><a href="index.html">会社概要</a></li>
-          <li><a href="access.html">アクセス</a></li>
-          <li><a href="index.html">産業廃棄物収集</li>
-        </ul>
-      </nav>
-      <!-- 問い合わせ電話番号の表示 -->
-      <div class="phone">
-        <span>電話番号</span>
-        090-2590-4985
-      </div>
-    </header>
+    <meta name="description" content="エスエイチ商会のアクセス情報（所在地・電話番号・地図）">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <!-- ヘッダー -->
+    <header>
+      <div class="top-bar">
+        <div class="brand"><a href="index.html">エスエイチ商会</a></div>
+        <nav>
+          <ul>
+            <li><a href="index.html">出張引き取り</a></li>
+            <li><a href="buy_item.html">回収項目</a></li>
+            <li><a href="index.html">会社概要</a></li>
+            <li><a href="access.html">アクセス</a></li>
+            <li><a href="index.html">産業廃棄物収集</a></li>
+          </ul>
+        </nav>
+        <div class="phone">
+          <span>電話番号</span>
+          090-2590-4985
+        </div>
+      </div>
+    </header>
+
+    <!-- セクション見出し -->
     <section class="news-section">
-    <h2>アクセス</h2>
-  </section>
+      <h2>アクセス</h2>
+    </section>
+
+    <!-- メイン -->
     <main class="wrapper">
       <section class="address-card">
-        <div style="text-align: center;">
-          <h3>
-          本社<br>
-          〒571-0044 大阪府門真市松生町3-3<br>
-          TEL: 06-4304-4104<br>
-          FAX: 06-4304-4104<br>
-          携帯: 090-2590-4985(西浦)<br>
-          </h3>
+        <div class="address-inner">
+          <h3>本社</h3>
+          <p>
+            〒571-0044<br />
+            大阪府門真市松生町3-3<br />
+            TEL: 06-4304-4104<br />
+            FAX: 06-4304-4104<br />
+            携帯: 090-2590-4985（西浦）
+          </p>
         </div>
-        
       </section>
-    </main>
-    <div style="text-align: center;">
-   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d289.46325784448743!2d135.58396595814537!3d34.728540407626454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e1c907799031%3A0x4eac6fd0cf1bc404!2z44CSNTcxLTAwNDQg5aSn6Ziq5bqc6ZaA55yf5biC5p2-55Sf55S677yT4oiS77yTIOODiuOCq-OCv-ODi-ijveS9nOaJgA!5e0!3m2!1sja!2sjp!4v1760695103186!5m2!1sja!2sjp" 
-   width="1300" 
-   height="800" 
-   style="border:0;" 
-   allowfullscreen="" 
-   loading="lazy" 
-   referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-  </div>
 
+      <!-- レスポンシブな地図 -->
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d289.46325784448743!2d135.58396595814537!3d34.728540407626454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e1c907799031%3A0x4eac6fd0cf1bc404!2z44CSNTcxLTAwNDQg5aSn6Ziq5bqc6ZaA55yf5biC5p2-55Sf55S677yT4oiS77yTIOODiuOCq-OCv-ODi-ijveS9nOaJgA!5e0!3m2!1sja!2sjp!4v1760695103186!5m2!1sja!2sjp"
+          title="エスエイチ商会 本社の地図"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </main>
+
+    <!-- ライセンス表記 -->
+    <div class="licenses">
+      <div>古物商 第62228R035744号</div>
+      <div>金属屑 第5745号</div>
+      <div>産業廃棄収集運搬業 第244451号</div>
+    </div>
+
+    <footer>
+      © 2025 エスエイチ商会
+    </footer>
   </body>
 </html>
