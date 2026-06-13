@@ -8,46 +8,45 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <!-- ヘッダー -->
     <header>
       <div class="top-bar">
         <div class="brand"><a href="index.html">エスエイチ商会</a></div>
-        <nav>
+        <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav">
           <ul>
             <li><a href="kataduke.html">片付け</a></li>
             <li><a href="buy_item.html">回収項目</a></li>
-            <li><a href="access.html">アクセス</a></li>
+            <li><a href="access.html" aria-current="page">アクセス</a></li>
           </ul>
         </nav>
         <div class="phone">
           <span>電話番号</span>
-          090-2590-4985
+          <a href="tel:09025904985">090-2590-4985</a>
         </div>
       </div>
     </header>
 
-    <!-- セクション見出し -->
     <section class="news-section">
       <h2>アクセス</h2>
     </section>
 
-    <!-- メイン -->
     <main class="wrapper">
-      <section class="address-card">
+      <section class="address-card fade-in">
         <div class="address-inner">
           <h3>本社</h3>
           <p>
             〒571-0044<br />
             大阪府門真市松生町3-3<br />
-            TEL: 06-4304-4104<br />
+            TEL: <a href="tel:0643044104">06-4304-4104</a><br />
             FAX: 06-4304-4104<br />
-            携帯: 090-2590-4985（西浦）
+            携帯: <a href="tel:09025904985">090-2590-4985</a>（西浦）
           </p>
         </div>
       </section>
 
-      <!-- レスポンシブな地図 -->
-      <div class="map-container">
+      <div class="map-container fade-in">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.072329356458!2d135.58163807588818!3d34.728571172909916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e10059d8ffcb%3A0xc68d0d698de69967!2z44Ko44K544Ko44Kk44OB5ZWG5Lya!5e0!3m2!1sja!2sjp!4v1763615892646!5m2!1sja!2sjp"
           title="エスエイチ商会 本社の地図"
@@ -57,7 +56,6 @@
       </div>
     </main>
 
-    <!-- ライセンス表記 -->
     <div class="licenses">
       <div>古物商 第62228R035744号</div>
       <div>金属屑 第5745号</div>
@@ -65,7 +63,21 @@
     </div>
 
     <footer>
-      © 2025 エスエイチ商会
+      <div class="footer-inner">
+        <div class="footer-brand">エスエイチ商会</div>
+        <nav class="footer-nav">
+          <a href="kataduke.html">片付け</a>
+          <a href="buy_item.html">回収項目</a>
+          <a href="access.html">アクセス</a>
+        </nav>
+        <div class="footer-contact">
+          <a href="tel:09025904985">090-2590-4985</a><br>
+          〒571-0044 大阪府門真市松生町3-3
+        </div>
+      </div>
+      <p class="footer-copy">© 2025 エスエイチ商会</p>
     </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

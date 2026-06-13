@@ -11,53 +11,105 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- 会社ロゴとナビゲーションを含むトップヘッダー -->
   <header>
     <div class="top-bar">
-      <!-- サイト名ロゴ -->
       <div class="brand"><a href="index.html">エスエイチ商会</a></div>
-      <!-- 主なページへのナビゲーションリンク -->
-      <nav>
+      <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav">
         <ul>
           <li><a href="kataduke.html">片付け</a></li>
           <li><a href="buy_item.html">回収項目</a></li>
           <li><a href="access.html">アクセス</a></li>
         </ul>
       </nav>
-      <!-- 問い合わせ電話番号の表示 -->
       <div class="phone">
         <span>電話番号</span>
-        090-2590-4985
+        <a href="tel:09025904985">090-2590-4985</a>
       </div>
     </div>
   </header>
 
-  <!-- 新着情報セクションの見出し部分 -->
   <section class="news-section">
-    <h2>会社概要</h2>
+    <h2>大阪・門真市のリサイクル専門店</h2>
   </section>
 
-   <!-- ヒーロー（大きな写真） -->
   <section class="hero">
-    <!-- ここに好みの写真を置く（推奨サイズ: 横1200〜2000px） -->
     <img src="image/hero2.jpeg" alt="ヒーロー画像" class="hero-img" />
     <div class="hero-overlay">
       <div class="container hero-content">
         <h1 style="text-align: center;">遺品整理や不用品のお引き取りします</h1>
         <p style="text-align: center;" class="lead">迅速・丁寧・安心の出張引き取り。まずはお電話ください。</p>
-        <a style="text-align: center;" class="cta" href="tel:09025904985">今すぐ電話する:090-2590-4985</a>
+        <a style="text-align: center;" class="cta" href="tel:09025904985">今すぐ電話する：090-2590-4985</a>
       </div>
     </div>
   </section>
 
-  <div class="licenses">
-      <div>古物商 第62228R035744号</div>
-      <div>金属屑 第5745号</div>
-      <div>産業廃棄収集運搬業 第244451号</div>
-    </div>
-  <!-- 著作権表示を含むフッター -->
+  <main class="wrapper">
+
+    <section class="service-grid fade-in">
+      <article>
+        <h3>🏠 片付け・遺品整理</h3>
+        <p>ご自宅や店舗の不用品をまとめて回収。遺品整理も一つずつ丁寧に対応します。</p>
+        <a href="kataduke.html" class="card-link">詳しく見る →</a>
+      </article>
+      <article>
+        <h3>♻️ 金属スクラップ買取</h3>
+        <p>銅・真鍮・鉄くず・バッテリーなど幅広く対応。現地計量で正確な価格をご提示。</p>
+        <a href="buy_item.html" class="card-link">詳しく見る →</a>
+      </article>
+      <article>
+        <h3>🚛 即日出張対応</h3>
+        <p>お急ぎの場合でもご相談ください。大阪府全域に対応しています。</p>
+        <a href="tel:09025904985" class="card-link">電話で相談する →</a>
+      </article>
+    </section>
+
+    <section class="service-points fade-in">
+      <article>
+        <h3>免許・資格あり</h3>
+        <p>古物商・金属屑・産業廃棄物収集運搬の許可を取得。法令に基づいた適正処理を行います。</p>
+      </article>
+      <article>
+        <h3>地域密着30年</h3>
+        <p>門真市を中心に大阪全域で活動。地域の皆様に信頼いただいている実績があります。</p>
+      </article>
+      <article>
+        <h3>出張見積もり無料</h3>
+        <p>まずはお気軽にご連絡ください。現地確認の上、明朗な価格をご案内します。</p>
+      </article>
+    </section>
+
+    <section class="contact-callout fade-in">
+      <p>「急いで片付けたい」「まずは相談だけしたい」など、どんなことでもお気軽にご連絡ください。</p>
+      <a class="cta" href="tel:09025904985">090-2590-4985 に電話する</a>
+    </section>
+
+  </main>
+
+  <div class="licenses fade-in">
+    <div>古物商 第62228R035744号</div>
+    <div>金属屑 第5745号</div>
+    <div>産業廃棄収集運搬業 第244451号</div>
+  </div>
+
   <footer>
-    © 2025 エスエイチ商会
+    <div class="footer-inner">
+      <div class="footer-brand">エスエイチ商会</div>
+      <nav class="footer-nav">
+        <a href="kataduke.html">片付け</a>
+        <a href="buy_item.html">回収項目</a>
+        <a href="access.html">アクセス</a>
+      </nav>
+      <div class="footer-contact">
+        <a href="tel:09025904985">090-2590-4985</a><br>
+        〒571-0044 大阪府門真市松生町3-3
+      </div>
+    </div>
+    <p class="footer-copy">© 2025 エスエイチ商会</p>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

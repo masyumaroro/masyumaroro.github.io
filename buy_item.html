@@ -10,28 +10,26 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- 会社ロゴとナビゲーションを含むトップヘッダー -->
   <header>
     <div class="top-bar">
-      <!-- サイト名ロゴ -->
       <div class="brand"><a href="index.html">エスエイチ商会</a></div>
-      <!-- 主なページへのナビゲーションリンク -->
-      <nav>
+      <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav">
         <ul>
           <li><a href="kataduke.html">片付け</a></li>
-          <li><a href="buy_item.html">回収項目</a></li>
+          <li><a href="buy_item.html" aria-current="page">回収項目</a></li>
           <li><a href="access.html">アクセス</a></li>
         </ul>
       </nav>
-      <!-- 問い合わせ電話番号の表示 -->
       <div class="phone">
         <span>電話番号</span>
-        090-2590-4985
+        <a href="tel:09025904985">090-2590-4985</a>
       </div>
     </div>
   </header>
 
-  <!-- 新着情報セクションの見出し部分 -->
   <section class="news-section">
     <h2>回収項目</h2>
   </section>
@@ -48,7 +46,7 @@
       </div>
     </section>
 
-    <section class="service-points">
+    <section class="service-points fade-in">
       <article>
         <h3>即日引き取り</h3>
         <p>工場・現場・店舗までトラックで伺い、その場で積み込み。お急ぎ案件も柔軟に対応。</p>
@@ -63,7 +61,7 @@
       </article>
     </section>
 
-    <section class="material-grid">
+    <section class="material-grid fade-in">
       <article class="material-card">
         <img src="image/Cu_image.png" alt="銅の写真">
         <div class="material-body">
@@ -108,7 +106,7 @@
       </article>
     </section>
 
-    <section class="flow">
+    <section class="flow fade-in">
       <h3>回収の流れ</h3>
       <ol>
         <li>お電話・LINE・メールでお問い合わせ</li>
@@ -118,7 +116,7 @@
       </ol>
     </section>
 
-    <section class="contact-callout">
+    <section class="contact-callout fade-in">
       <p>大量持ち込みや定期回収もお任せください。法人・個人問わずお気軽にご連絡ください。</p>
       <a class="cta" href="tel:09025904985">090-2590-4985 に電話する</a>
     </section>
@@ -130,9 +128,22 @@
     <div>産業廃棄収集運搬業 第244451号</div>
   </div>
 
-  <!-- 著作権表示を含むフッター -->
   <footer>
-    © 2025 エスエイチ商会
+    <div class="footer-inner">
+      <div class="footer-brand">エスエイチ商会</div>
+      <nav class="footer-nav">
+        <a href="kataduke.html">片付け</a>
+        <a href="buy_item.html">回収項目</a>
+        <a href="access.html">アクセス</a>
+      </nav>
+      <div class="footer-contact">
+        <a href="tel:09025904985">090-2590-4985</a><br>
+        〒571-0044 大阪府門真市松生町3-3
+      </div>
+    </div>
+    <p class="footer-copy">© 2025 エスエイチ商会</p>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
