@@ -1,3 +1,9 @@
+// ヘッダースクロール効果
+const header = document.querySelector('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 10);
+}, { passive: true });
+
 // ハンバーガーメニュー
 const hamburger = document.querySelector('.hamburger');
 const mainNav = document.querySelector('.main-nav');
@@ -29,7 +35,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.12 }
+  { threshold: 0.1 }
 );
 
 fadeEls.forEach((el) => observer.observe(el));
