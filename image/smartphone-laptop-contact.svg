@@ -1,0 +1,32 @@
+<svg
+  viewBox="0 0 800 400"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Smartphone -->
+  <rect x="120" y="95" width="150" height="245" rx="22"/>
+  <path d="M175 112h40"/>
+  <path d="M176 320h38"/>
+
+  <!-- Laptop screen -->
+  <rect x="315" y="130" width="300" height="175" rx="16"/>
+
+  <!-- Laptop base -->
+  <path d="M295 305h340"/>
+  <path d="M295 305l-32 28h404l-32-28"/>
+  <path d="M390 318h150"/>
+  <path d="M420 305l8 13h74l8-13"/>
+
+  <!-- Speech bubble -->
+  <rect x="470" y="55" width="180" height="80" rx="18"/>
+  <path d="M505 135l-24 24 7-24"/>
+
+  <!-- Ellipsis dots -->
+  <circle cx="525" cy="95" r="3"/>
+  <circle cx="560" cy="95" r="3"/>
+  <circle cx="595" cy="95" r="3"/>
+</svg>
